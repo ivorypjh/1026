@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if result %}
+    {% for picture in result %}
+    # 버킷 이름과 리전을 src(URL)로 사용하므로 사용자에 맞게 수정 필요
+    # 뒤에는 사용할 이미지를 지정하는데 파일 이름을 입력
+    # width, height 지정해서 크기를 조절할 수도 있음
+        <img src="https://itstudybucket.s3.ap-northeast1.amazonaws.com/{{ picture.imgfile }}">
+    {% endfor %}
+{% endif %}
+</body>
+</html>
